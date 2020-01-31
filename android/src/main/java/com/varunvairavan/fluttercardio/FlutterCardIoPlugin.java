@@ -191,7 +191,7 @@ public class FlutterCardIoPlugin implements MethodCallHandler, ActivityResultLis
                 response.put("cvv", scanResult.cvv);
                 response.put("postalCode", scanResult.postalCode);
                 pendingResult.success(response);
-            } else {
+            } else if(pendingResult!=null){
                 pendingResult.success(null);
             }
             pendingResult = null;
